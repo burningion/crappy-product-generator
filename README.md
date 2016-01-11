@@ -1,7 +1,5 @@
 # Crappy Product Generator
 
-![gan trained on amazon crappy products](https://raw.githubusercontent.com/burningion/crappy-product-generator/master/images/out.gif)![gan trained on amazon crappy products](https://raw.githubusercontent.com/burningion/crappy-product-generator/master/images/out.gif)![gan trained on amazon crappy products](https://raw.githubusercontent.com/burningion/crappy-product-generator/master/images/out.gif)
-
 This code is the end result of a blog post, training a neural network on Amazon's lowest reviewed products and one star reviews. It uses char-rnn and torch-gan to generate text and images, respectively.
 
 ## Requirements
@@ -19,6 +17,16 @@ $ python3 sorcery.py 50
 ```
 
 You'll notice that there will be times that the neural network won't generate a cohesive, finished review, and so the loop just keeps trying to generate product reviews until it gets finished.
+
+Once that's done, you can view the generated projects in a web browser. Using Python3:
+
+```bash
+$ python3 -m http.server
+```
+
+Then, open your web browser to [http://localhost:8000](localhost:8000), and you should be able to see all of your generated products! The sky's the limit!
+
+![gan trained on amazon crappy products](https://raw.githubusercontent.com/burningion/crappy-product-generator/master/images/out.gif)![gan trained on amazon crappy products](https://raw.githubusercontent.com/burningion/crappy-product-generator/master/images/out.gif)![gan trained on amazon crappy products](https://raw.githubusercontent.com/burningion/crappy-product-generator/master/images/out.gif)
 
 ## License
 
