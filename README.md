@@ -24,7 +24,7 @@ Once that's done, you can view the generated projects in a web browser. Using Py
 $ python3 -m http.server
 ```
 
-Then, open your web browser to [http://localhost:8000](localhost:8000), and you should be able to see all of your generated products! The sky's the limit!
+Then, open your web browser to [http://localhost:8000](http://localhost:8000), and you should be able to see all of your generated products! The sky's the limit!
 
 ![gan trained on amazon crappy products](https://raw.githubusercontent.com/burningion/crappy-product-generator/master/images/out.gif)![gan trained on amazon crappy products](https://raw.githubusercontent.com/burningion/crappy-product-generator/master/images/out.gif)![gan trained on amazon crappy products](https://raw.githubusercontent.com/burningion/crappy-product-generator/master/images/out.gif)
 
