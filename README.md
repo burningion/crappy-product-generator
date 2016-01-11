@@ -1,5 +1,7 @@
 # Crappy Product Generator
 
+![gan trained on amazon crappy products](https://raw.githubusercontent.com/burningion/crappy-product-generator/master/images/out.gif)![gan trained on amazon crappy products](https://raw.githubusercontent.com/burningion/crappy-product-generator/master/images/out.gif)![gan trained on amazon crappy products](https://raw.githubusercontent.com/burningion/crappy-product-generator/master/images/out.gif)
+
 This code is the end result of a blog post, training a neural network on Amazon's lowest reviewed products and one star reviews. It uses char-rnn and torch-gan to generate text and images, respectively.
 
 ## Requirements
