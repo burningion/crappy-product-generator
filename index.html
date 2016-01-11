@@ -1,0 +1,68 @@
+<html>
+  <head>
+    <title>Crappy Amazon Products</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  </head>
+
+  <body>
+    <center><h1>Generated Crappy Products</h1>
+      </center>
+    <div id="amWrapper" style="width: 100%;">
+      <div id="amazonproducts" style="background-color: #A9A9A9;
+text-align: center;
+margin-bottom: 50px;
+padding-bottom: 50px; 
+padding-top: 50px;
+margin-left: 12%; margin-right: 12%;">
+	<div id="productImage" style="float: left; margin-left: 87px;">
+	</div>
+	<div id="productName" style="text-align: left; margin-left: 312px; margin-top: -10px; padding-right: 169px;">
+	</div>
+	<div id="price" style="text-align: left; padding-left: 312px;">
+	</div>
+	<div id="review" style="text-align:left;margin-left: 312px;margin-right: 195px;">
+	</div>
+	<div id="controller" style="margin-top: 32px; text-align: right; margin-right: 195px;">
+	  <button id="nextProd">Next Product</button>
+	</div>
+	</div>
+    <script type="text/javascript">
+      <!--
+var productData = [];
+jQuery(document).ready(function($) {
+url = '/divinations.json';
+$.getJSON( url, function( data ) {
+  var items = [];
+  productData = data;
+  chosenOne = Math.floor((Math.random() * productData.length) + 1);
+  productCamel = productData[chosenOne].productName.replace(
+  /(^|\s+)(\S)(\S*)/g,
+  function(match, whitespace, firstLetter, rest) {
+    return whitespace + firstLetter.toUpperCase() + rest.toLowerCase();
+  }
+);
+  $('#productName').html('<strong style="font-size: 150%;">' + productCamel  + '</strong>');
+  $('#price').text(productData[chosenOne].price);
+  $('#review').html(productData[chosenOne].finalReview);
+  $('#review h2').prepend('<img src="/images/onestar.png" />');
+  $('#productImage').html('<img src="' + productData[chosenOne].finalImage + '" width="128" height="128" />');
+});
+$('#nextProd').click(function() {
+  chosenOne = Math.floor((Math.random() * productData.length) + 1);
+  productCamel = productData[chosenOne].productName.replace(
+  /(^|\s+)(\S)(\S*)/g,
+  function(match, whitespace, firstLetter, rest) {
+    return whitespace + firstLetter.toUpperCase() + rest.toLowerCase();
+  }
+);
+  $('#productName').html('<strong style="font-size: 150%;">' + productCamel + '</strong>');
+  $('#price').text(productData[chosenOne].price);
+  $('#review').html(productData[chosenOne].finalReview);
+  $('#review h2').prepend('<img src="/images/onestar.png" />');
+  $('#productImage').html('<img src="' + productData[chosenOne].finalImage + '" width="128" height="128" />');
+});
+});
+
+//--></script>
+  </body>
+</html>
